@@ -1,13 +1,14 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.Joker;
+import com.example.jokeandroidlibrary.JokeActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -52,7 +53,9 @@ private static String YOUR_ADMOB_APP_ID = "ca-app-pub-3940256099942544~334751171
     public void tellJoke(View view){
         Joker joker = new Joker();
 
-        Toast.makeText(this, joker.tellMeJoke(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, JokeActivity.class);
+        intent.putExtra("joke", joker.tellMeJoke());
+        startActivity(intent);
     }
 
 
