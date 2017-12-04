@@ -7,9 +7,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.MobileAds;
+import com.example.Joker;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 public class MainActivity extends AppCompatActivity {
 private static String YOUR_ADMOB_APP_ID = "ca-app-pub-3940256099942544~3347511713";
@@ -48,8 +49,10 @@ private static String YOUR_ADMOB_APP_ID = "ca-app-pub-3940256099942544~334751171
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+    public void tellJoke(View view){
+        Joker joker = new Joker();
+
+        Toast.makeText(this, joker.tellMeJoke(), Toast.LENGTH_SHORT).show();
     }
 
 
