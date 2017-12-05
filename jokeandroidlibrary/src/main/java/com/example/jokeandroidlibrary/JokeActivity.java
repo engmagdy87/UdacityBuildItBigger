@@ -19,11 +19,6 @@ public class JokeActivity extends AppCompatActivity {
         Intent intent = getIntent();
         jokeBody = intent.getStringExtra("joke");
 
-        if (jokeBody != null) {
-            jokeTextView.setText(jokeBody);
-        } else {
-            jokeTextView.setText("Joke not found");
-        }
-
+        jokeTextView.setText(jokeBody);
     }
 }
