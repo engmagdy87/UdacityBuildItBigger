@@ -21,6 +21,20 @@ android {
     configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
     }
+    sourceSets {
+        androidTest{
+            java.srcDir file('src/androidTest/java')
+        }
+    }
+    productFlavors {
+        free {
+            applicationId "com.udacity.gradle.builditbigger.free"
+        }
+
+        paid {
+            applicationId "com.udacity.gradle.builditbigger.paid"
+        }
+    }
 }
 
 dependencies {
@@ -34,4 +48,6 @@ dependencies {
     compile project(':jokeslibrary')
     compile project(':jokeandroidlibrary')
     compile project(path: ':backend', configuration: 'android-endpoints')
+    androidTestCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
 }
