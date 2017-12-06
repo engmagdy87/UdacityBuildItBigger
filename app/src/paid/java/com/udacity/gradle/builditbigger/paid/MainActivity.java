@@ -1,15 +1,14 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.paid;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.gms.ads.AdView;
+import com.udacity.gradle.builditbigger.R;
 
 public class MainActivity extends AppCompatActivity {
-private static String YOUR_ADMOB_APP_ID = "ca-app-pub-3940256099942544~3347511713";
-    private AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
