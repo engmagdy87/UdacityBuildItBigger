@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.jokeandroidlibrary.JokeActivity;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 
 /**
  * A placeholder fragment containing a simple view.
@@ -35,12 +32,7 @@ public class MainActivityFragment extends Fragment {
                 getJoke();
             }
         });
-        AdView mAdView = root.findViewById(R.id.adView);
 
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-        mAdView.loadAd(adRequest);
         return root;
     }
 
